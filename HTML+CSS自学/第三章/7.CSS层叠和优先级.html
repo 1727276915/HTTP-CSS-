@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box {
+            color: red;
+        }
+        
+        .box {
+            color: blue;
+        } */
+        
+        * {
+            color: red;
+        }
+        
+        div {
+            color: blue!important;
+        }
+        
+        .box {
+            color: green;
+        }
+        
+        #idbox {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box">我的我的都是我的！</div> -->
+    <!-- 蓝色将红色覆盖掉了，说明发生了层叠 -->
+    <div class="box" id="idbox" style="background-color: aqua;">芜湖</div>
+    <!-- 优先级计算 -->
+    <!-- 通配符选择器1：* -->
+    <!-- 标签选择器2:div/span/p/li -->
+    <!-- 类选择器3：class -->
+    <!-- id选择器4；id -->
+    <!-- 行内样式5；style -->
+    <!-- !important6（尽量不要在公用代码里使用） -->
+</body>
+
+</html>

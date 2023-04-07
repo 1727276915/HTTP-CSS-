@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            /* 设为Flex布局以后，子元素的float,clear和vertical-align属性将失效 */
+            display: flex;
+            /* 决定注重的方向（即项目的排列方向） */
+            /*  flex-direction:row(从左往右排列)|row-reverse(row的镜像排列)|column(从上到下排列)|column-reverse(column的的镜像排列) */
+            /* flex-direction: column-reverse; */
+            /* flex-wrap: wrap; */
+            /*  设置换行后，每个元素就会返回到原来设置的大小，而不是被flex等分 */
+            /* justify-content: space-around; */
+            /* 定义水平方向对齐方式 */
+            /* justify-content:flex-start(从左往右对齐)|flex-end(从右往左对齐)|center(居中)|space-between|space-around(两个子元素的距离是子元素位于边框的距离的两倍) */
+            align-items: baseline;
+            /* 定义垂直方向对齐方式 */
+            /* align-items: flex-start(从上向下排序)|flex-end(从下向上排序)|center(居中)|baseline(以元素基线进行排列)|stretch() */
+        }
+        
+        .b {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        .c {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* line-height: 100px; */
+        }
+        
+        .d {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* line-height: 150px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <div class="b">1</div>
+        <div class="c">2</div>
+        <div class="d">3</div>
+        <!-- <div class="d">3</div>
+        <div class="d">3</div>
+        <div class="d">3</div>
+        <div class="d">3</div> -->
+    </div>
+
+</body>
+
+</html>

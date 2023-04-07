@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .big {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 盒子内边距 */
+            padding-left: 10px;
+            /* 左边距10px */
+            padding-top: 10px;
+            /* 上边距10px */
+            padding-right: 10px;
+            /* 右边距10px */
+            padding-bottom: 10px;
+            /* 下边距10px，相对于父级元素的width */
+        }
+        
+        .small {
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            padding: 10%;
+            /* 边距10%，相对于父级元素的width */
+            border-right: 10px solid #000;
+            border-left: 10px dotted #000;
+            border-top: 10px dashed #000;
+            /* 盒子的外边距(margin) */
+        }
+        
+        .box {
+            box-sizing: border-box;
+            /* IE标准的盒子模型（怪异盒模型） */
+            /* box-sizing:border-box */
+            /* boxwigth=contentwidth+border+padding */
+            /* W3C的标准盒子模型（标准盒模型） */
+            /* boxwidth=contentwidth */
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            border: 5px solid #000;
+            padding: 10px;
+        }
+        
+        .top {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 20px;
+        }
+        
+        .bottom {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-top: 30px;
+        }
+        /* 上下两个兄弟盒子的margin都为正时取大，都为负取小，一正一负相加 */
+        /* 父子元素盒子的margin（假设没有内边距或边框把外边距分隔开），也会合并 */
+        /* 只有普通文档流中块框的垂直外边距才会发生外边框合并。行边框、浮动框或者绝对定位之间的外边框不会合并 */
+        
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+            /* overflow: auto; */
+            /* 解决父子边距合并的方法之一 */
+        }
+        
+        .father::before {
+            display: table;
+            content: "";
+        }
+        /* 解决父子边距合并的方法之二 */
+        
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: blanchedalmond;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="big">
+        <div class="small"></div>
+
+    </div> -->
+
+    <!-- <div class="box">
+
+    </div> -->
+    <!-- <div class="top"></div>
+    <div class="bottom"></div> -->
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+</body>
+
+</html>
