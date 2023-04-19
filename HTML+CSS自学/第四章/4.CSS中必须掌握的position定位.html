@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .a {
+            width: 300px;
+            height: 800px;
+            background-color: red;
+        }
+        
+        .b {
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+            /* position: relative; */
+            /* 如果将这个position注释后，粉色的div就会向蓝色div的父级去找 */
+            position: sticky;
+            top: 0;
+            /* right: 0; */
+        }
+        
+        .c {
+            width: 300px;
+            height: 1200px;
+            background-color: green;
+        }
+        
+        .aa {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            /* 将粉色设置为蓝色div的右上角 */
+            /* position: absolute; */
+            /* absolute放置于定位的元素 */
+            /* relative放置于定位到的目标元素上 */
+            /* right: 0; */
+            /* right后面可以加上像素或者百分比 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum ipsa ex inventore distinctio fugit officia dolorem qui earum maiores exercitationem at error facere voluptatibus dolorum repellat similique provident totam, molestiae eum! Quis, repellendus
+        impedit laboriosam inventore architecto id vitae similique blanditiis perspiciatis, mollitia labore animi accusantium illo ducimus. Libero assumenda incidunt nemo fugiat architecto reiciendis harum ipsam fugit voluptatum asperiores.
+    </div>
+    <div class="b">
+        <div class="aa"></div>
+    </div>
+    <div class="c">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aperiam, dignissimos praesentium perspiciatis, ab nam ea vitae aliquid ratione illum eum labore assumenda delectus, distinctio quam! Nisi exercitationem deleniti sit fugit provident quos ab
+        voluptatum ducimus vero veniam dolorum perspiciatis expedita porro voluptatibus sed numquam odio, laboriosam fuga autem repudiandae mollitia alias dicta ut aliquid! Magnam id esse cupiditate nam.
+    </div>
+    <!-- position常用的几个值 -->
+    <!-- position:static(静态定位) 父元素 -->
+    <!-- position:relative(相对定位) 父元素 -->
+    <!-- position:absolute(绝对定位) -->
+    <!-- position:fixed(固定定位) 父元素 -->
+    <!-- position:sitcky(粘性定位) 父元素 -->
+
+    <!-- 相关属性 -->
+    <!-- z-index:使用场景：当定位的盒子重叠在一起 -->
+</body>
+
+</html>
