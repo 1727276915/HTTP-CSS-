@@ -1,0 +1,87 @@
+<!-- 实现悬浮二维码和类似模块 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            right: 10px;
+            bottom: 370px;
+            z-index: +99;
+        }
+        
+        .box {
+            position: fixed;
+            right: 10px;
+            bottom: 120px;
+            z-index: 99;
+        }
+        
+        .box div {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        
+        .a {
+            background-color: red;
+        }
+        
+        .b {
+            background-color: blue;
+        }
+        
+        .c {
+            background-color: green;
+        }
+        
+        .d {
+            padding: 0 8px;
+            position: fixed;
+            right: 69px;
+            bottom: 138px;
+            background-color: #10c461;
+            text-align: center;
+            color: white;
+            height: 30px;
+            width: 200px;
+            line-height: 30px;
+        }
+        
+        .dd {
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent #10c461;
+            position: fixed;
+            right: 53px;
+            bottom: 143px;
+            z-index: 99;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="" alt="">
+    <!-- 找到图片导入即可 -->
+    <div class="box">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    <div class="d">
+        哎呦~你干嘛~嗨哟哦~
+        <div class="dd"></div>
+    </div>
+</body>
+<!-- 主要使用position和fixed定位 -->
+
+</html>

@@ -1,0 +1,233 @@
+<!-- 什么是BFC -->
+<!-- 定义 -->
+<!-- 块的格式化上下文（Block Formatting Context,BFC）是web网页的可视化CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域 -->
+<!-- 即：形成了一块封闭的区域，能检测到区域内脱离文档流的元素 -->
+<!-- 特点 -->
+<!-- CSS中隐含的属性，开启后不会被浮动的元素覆盖 -->
+<!-- BFC元素可以包含浮动元素 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            border: 10px solid red;
+            /* overflow: hidden; */
+        }
+        
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+
+</html> -->
+<!-- BFC元素的子元素和父元素外边距不重叠 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            overflow: hidden;
+        }
+        
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin-top: 20px;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+    <!-- <div class="box2"></div> -->
+</body>
+
+</html>
+<!-- 开启（都会有副作用） -->
+<!-- 设置元素浮动float:left -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            border: 10px solid red;
+            /* overflow: hidden; */
+            float: left;
+        }
+        
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+
+</body>
+
+</html> -->
+
+<!-- 设置为行内块元素display:inline-block -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            border: 10px solid red;
+            /* overflow: hidden; */
+            display: inline-block;
+        }
+        
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+
+</body>
+
+</html> -->
+<!-- overflow:hidden(推荐) -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            border: 10px solid red;
+            /* overflow: hidden; */
+        }
+        
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+
+ </html>  -->
+<!-- 作用 -->
+<!-- 清除浮动带来的影响 -->
+<!-- 解决边距缺陷问题(外边距折叠(Margin collapsing)也只会发生在属于同一BFC的块级元素之间) -->
