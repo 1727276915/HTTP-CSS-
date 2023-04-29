@@ -1,0 +1,159 @@
+<!-- 文本阴影 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            /* 文本阴影 */
+            /* 第一个为水平方向，第二个为竖直方向，第三个为阴影的模糊程度，第四个为阴影的颜色 */
+            text-shadow: 5px 5px 5px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        蒂蒂老婆贴贴~
+    </div>
+</body>
+
+</html> -->
+<!-- 超出一行后省略 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            background-color: red;
+            /* overflow:hidden为设置后可以隐藏超出部分 */
+            overflow: hidden;
+            /* white-space: nowrap为设置后不会进行换行 */
+            white-space: nowrap;
+            /* text-overflow: ellipsis为设置后超出部分用省略号代替 */
+            text-overflow: ellipsis;
+            /* text-overflow: clip设置后为裁剪超出部分 */
+            /* text-overflow: clip; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facere, necessitatibus provident quasi veniam aut quo? Sunt recusandae cum odio nihil ea consectetur magni numquam inventore eum vitae ratione at minus iste velit, unde hic excepturi omnis,
+        illum quaerat a ad ipsam quam nesciunt. Architecto quo atque ratione totam et?
+
+    </div>
+</body>
+
+</html> -->
+<!-- 超出两行省略/裁剪 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            background-color: red;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 下面三个不是CSS的属性，是兼容谷歌浏览器的一个属性值 */
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facere, necessitatibus provident quasi veniam aut quo? Sunt recusandae cum odio nihil ea consectetur magni numquam inventore eum vitae ratione at minus iste velit, unde hic excepturi omnis,
+        illum quaerat a ad ipsam quam nesciunt. Architecto quo atque ratione totam et?
+
+    </div>
+</body>
+
+</html> -->
+<!-- 文本换行 -->
+<!-- 长文本换行 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            background-color: red;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 下面三个不是CSS的属性，是兼容谷歌浏览器的一个属性值 */
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            word-break: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facere, necessitatibus provident quasi veniam aut quo? Sunt recusandae cum odio nihil ea consectetur magni numquam inventore eum vitae ratione at minus iste velit, unde hic excepturi omnis,
+        illum quaerat a ad ipsam quam nesciunt. Architecto quo atque ratione totam et?
+
+    </div>
+</body>
+
+</html> -->
+<!-- 单词拆分换行 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            background-color: red;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 下面三个不是CSS的属性，是兼容谷歌浏览器的一个属性值 */
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facere, necessitatibus provident quasi veniam aut quo? Sunt recusandae cum odio nihil ea consectetur magni numquam inventore eum vitae ratione at minus iste velit, unde hic excepturi omnis,
+        illum quaerat a ad ipsam quam nesciunt. Architecto quo atque ratione totam et?
+
+    </div>
+</body>
+
+</html>
